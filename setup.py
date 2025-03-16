@@ -50,6 +50,7 @@ setup(
     ],
     extras_require={
         "dev": ["black"],
+        "deepseek": ["deepseek"]
     },
     entry_points={
         "console_scripts": [
