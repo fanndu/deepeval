@@ -28,6 +28,8 @@ class KeyValues(Enum):
     LOCAL_EMBEDDING_API_KEY = "LOCAL_EMBEDDING_API_KEY"
     USE_LOCAL_EMBEDDINGS = "USE_LOCAL_EMBEDDINGS"
 
+    # Deepseek support
+    DEEPSEEK_API_KEY = "DEEPSEEK_API_KEY"
 
 class KeyFileHandler:
     def __init__(self):

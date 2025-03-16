@@ -140,7 +140,7 @@ class AnswerRelevancyMetric(BaseMetric):
                     prompt=prompt, schema=Reason
                 )
                 return res.reason
-            except TypeError:
+            except AttributeError:
                 res = await self.model.a_generate(prompt)
                 data = trimAndLoadJson(res, self)
                 return data["reason"]
@@ -193,7 +193,7 @@ class AnswerRelevancyMetric(BaseMetric):
                     prompt, schema=Verdicts
                 )
                 return [item for item in res.verdicts]
-            except TypeError:
+            except AttributeError:
                 res = await self.model.a_generate(prompt)
                 data = trimAndLoadJson(res, self)
                 return [
@@ -240,7 +240,7 @@ class AnswerRelevancyMetric(BaseMetric):
                     prompt, schema=Statements
                 )
                 return res.statements
-            except TypeError:
+            except AttributeError:
                 res = await self.model.a_generate(prompt)
                 data = trimAndLoadJson(res, self)
                 return data["statements"]
